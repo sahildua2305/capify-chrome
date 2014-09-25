@@ -7,6 +7,7 @@
 
 	"browser_action": {
 		"default_icon": "assets/icons/icon-19.jpg",
+		"default_title": "Convert to Upper Case",
 		"default_popup": "main.html"
 	},
 	
