@@ -14,7 +14,10 @@ chrome.contextMenus.onClicked.addListener(onClickHandler);
 
 // The onClicked callback function
 function onClickHandler(info, tab){
-	var sText = info.selectionText;
+	//var sText = info.selectionText;
+	var sText = window.getSelection();
 	var url = "https://www.google.com/search?q="+encodeURIComponent(sText);
-	window.open(url, '_blank');
+	if(info.editable){
+		window.open(url, '_blank');
+	}
 }
